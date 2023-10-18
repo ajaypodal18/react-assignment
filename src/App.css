@@ -4,6 +4,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #f0f0f0;
+  overflow-y: hidden;
 }
 
 .app {
@@ -16,6 +17,7 @@ body {
   width: 100%;
   font-family: "Source Sans Pro", sans-serif;
   padding: 20px;
+  overflow:scroll;
 }
 
 /* sidebar */

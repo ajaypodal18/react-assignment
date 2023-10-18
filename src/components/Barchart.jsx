@@ -19,10 +19,14 @@ const data = {
   
 };
 
+const options = {
+  responsive: true,
+}
+
 const Barchart = () => {
   return (
     <div>
-      <Bar data={data} />
+      <Bar style={{height:'300px', width:'100%'}} data={data} options={options} />
     </div>
   );
 };

@@ -1,6 +1,7 @@
 import React from "react";
 import { Doughnut } from "react-chartjs-2";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
+import { Typography } from "@mui/material";
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 const data = {
@@ -8,7 +9,7 @@ const data = {
   datasets: [
     {
       label: "My First Dataset",
-      data: [300, 50, 100],
+      data: [65, 30, 100],
       backgroundColor: [
         "rgb(255, 99, 132)",
         "rgb(54, 162, 235)",
@@ -19,6 +20,12 @@ const data = {
   ],
 };
 
+const Value =()=>{
+  return
+  <Typography>Total New Customers</Typography>
+}
+
+
 const textCenter = {
   id:'textCenter',
   beforeDatasetsDraw(chart, args, pluginOptions) {
@@ -27,7 +34,7 @@ const textCenter = {
     ctx.font = 'bolder 30px sans-serif';
     ctx.fillStyle = 'red';
     ctx.textAlign = 'center';
-    ctx.fillText('text',chart.getDatasetMeta(0).data[0].x,chart.getDatasetMeta(0).data[0].y)
+    ctx.fillText(`${data.datasets[0].data[0]} % Total New Customers`,chart.getDatasetMeta(0).data[0].x,chart.getDatasetMeta(0).data[0].y)
   }
 }
 
