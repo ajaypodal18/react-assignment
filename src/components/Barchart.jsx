@@ -1,32 +1,75 @@
 import React from "react";
 import { Bar } from "react-chartjs-2";
-import { Chart as ChartJS} from "chart.js/auto";
+import { Chart, registerables} from "chart.js";
+Chart.register(...registerables)
 
 const data = {
-  labels: ["Red", "Blue", "Yellow"],
+  labels: [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ],
   datasets: [
     {
-      label: "My First Dataset",
-      data: [300, 50, 100],
+      label:'Sales  ', 
+      data: [250, 150, 180, 170, 160, 220, 185, 195, 190, 235, 210, 200],
       backgroundColor: [
-        "rgb(255, 99, 132)",
-        "rgb(54, 162, 235)",
-        "rgb(255, 205, 86)",
+        "rgb(54, 162, 235)",  
+        "rgb(125, 125, 125, 0.22)",
+        "rgb(125, 125, 125, 0.22)",
+        "rgb(125, 125, 125, 0.22)",
+        "rgb(125, 125, 125, 0.22)",
+        "rgb(125, 125, 125, 0.22)",
+        "rgb(125, 125, 125, 0.22)",
+        "rgb(125, 125, 125, 0.22)",
+        "rgb(125, 125, 125, 0.22)",
+        "rgb(125, 125, 125, 0.22)",
+        "rgb(125, 125, 125, 0.22)",
+        "rgb(125, 125, 125, 0.22)",
       ],
+      borderRadius: 10,
       hoverOffset: 4,
     },
   ],
-  
 };
 
 const options = {
-  responsive: true,
-}
+  maintainAspectRatio: false, 
+  scales: {
+    y: {
+      grid: {
+        display: false,
+        drawBorder: false
+      },  
+      ticks: {
+        display: false,
+      },
+    },
+    x: {
+      grid: {
+        display: false,
+        drawBorder: false
+
+      },
+    },
+  },
+};
+
+
 
 const Barchart = () => {
   return (
     <div>
-      <Bar style={{height:'300px', width:'100%'}} data={data} options={options} />
+      <Bar data={data} options={options} height={280}/>
     </div>
   );
 };

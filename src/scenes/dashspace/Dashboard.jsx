@@ -195,12 +195,13 @@ export default function Dashboard() {
             <CardContent>
               <Box display="flex" style={{ justifyContent: "space-between" }}>
                 <CardHeader title="Product Sell" />
-                <div style={{display:'flex'}}>
+                <div style={{ display: "flex" }}>
                   <Box
                     display="flex"
                     backgroundColor="#ececec !important"
-                    borderRadius="3px"
+                    borderRadius="10px"
                     mr={2}
+                    mb={1}
                   >
                     <IconButton type="button" sx={{ p: 1 }}>
                       <SearchIcon />
