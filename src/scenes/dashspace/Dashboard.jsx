@@ -18,7 +18,7 @@ import BasicTable from "../../components/Datatable";
 export default function Dashboard() {
   return (
     <Box sx={{ flexGrow: 1, padding: "15px", overflow: "hidden" }}>
-      <Grid container rowSpacing={6} columnSpacing={8}>
+      <Grid container rowSpacing={3} columnSpacing={8}>
         <Grid item xs={6} md={3}>
           <Card>
             <CardContent
@@ -127,7 +127,7 @@ export default function Dashboard() {
         {/* Graphs and Chart */}
 
         <Grid item xs={6} md={8}>
-          <Card style={{height:'40vh'}}>
+          <Card style={{height:'45vh'}}>
             <CardContent>
               <CardHeader title="Overview" subheader="Monthly Earning" />
               <Barchart />
@@ -135,7 +135,7 @@ export default function Dashboard() {
           </Card>
         </Grid>
         <Grid item xs={6} md={4}>
-          <Card style={{height:'40vh'}}>
+          <Card style={{height:'45vh'}}>
             <CardContent>
               <CardHeader title="Customers" subheader="Customers that buy products" />
               <Piechart />

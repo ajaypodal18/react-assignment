@@ -14,7 +14,7 @@ function createData(name, stock, prices, totalSales) {
 const rows = [
   createData('Abstract 3D', 159, 6.0, 24, 4.0),
   createData('Sarphens Illustration', 237, 9.0, 37, 4.3),
-  createData('Sarphens Illustration', 237, 9.0, 37, 4.3),
+  createData('Sarph Illustration', 237, 9.0, 37, 4.3),
 ];
 
 export default function BasicTable() {
